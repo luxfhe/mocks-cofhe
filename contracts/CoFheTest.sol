@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import {Test} from "forge-std/Test.sol";
 import {TaskManager} from "./MockTaskManager.sol";
 import {ACL} from "./ACL.sol";
-import "@fhenixprotocol/cofhe-contracts/FHE.sol";
+import "@luxfhe/cofhe-contracts/FHE.sol";
 import {MockZkVerifier} from "./MockZkVerifier.sol";
 import {MockZkVerifierSigner} from "./MockZkVerifierSigner.sol";
 import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
@@ -29,7 +29,7 @@ abstract contract CoFheTest is Test {
     address public constant TM_ADMIN = address(128);
 
     constructor() {
-        etchFhenixMocks();
+        etchLuxFHEMocks();
     }
 
     function setLog(bool log) internal {
@@ -38,11 +38,11 @@ abstract contract CoFheTest is Test {
 
     // SETUP
 
-    function etchFhenixMocks() internal {
+    function etchLuxFHEMocks() internal {
         // Override chain id (uncomment to enable)
         // vm.chainId(421614); // Arb Sepolia
         // vm.chainId(31337); // Anvil
-        vm.chainId(420105); // Localfhenix host 1
+        vm.chainId(420105); // Localluxfhe host 1
 
         // TASK MANAGER
         deployCodeTo("MockTaskManager.sol:TaskManager", TASK_MANAGER_ADDRESS);

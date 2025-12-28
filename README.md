@@ -1,7 +1,7 @@
-# @fhenixprotocol/cofhe-mock-contracts [![NPM Package][npm-badge]][npm] [![License: MIT][license-badge]][license]
+# @luxfheprotocol/cofhe-mock-contracts [![NPM Package][npm-badge]][npm] [![License: MIT][license-badge]][license]
 
-[npm]: https://www.npmjs.com/package/@fhenixprotocol/cofhe-mock-contracts
-[npm-badge]: https://img.shields.io/npm/v/@fhenixprotocol/cofhe-mock-contracts.svg
+[npm]: https://www.npmjs.com/package/@luxfheprotocol/cofhe-mock-contracts
+[npm-badge]: https://img.shields.io/npm/v/@luxfheprotocol/cofhe-mock-contracts.svg
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
@@ -16,20 +16,20 @@ A mock smart contract library for testing CoFHE (Confidential Computing Framewor
   - ACL (Access Control List)
 - Synchronous operation simulation with mock delays
 - On-chain access to unencrypted values for testing
-- Compatible with the main `@fhenixprotocol/cofhe-contracts` package
+- Compatible with the main `@luxfheprotocol/cofhe-contracts` package
 
 ## Installation
 
 npm
 
 ```bash
-npm install @fhenixprotocol/cofhe-mock-contracts
+npm install @luxfheprotocol/cofhe-mock-contracts
 ```
 
 foundry
 
 ```bash
-forge install fhenixprotocol/cofhe-mock-contracts
+forge install luxfheprotocol/cofhe-mock-contracts
 ```
 
 ## Usages and Integrations
@@ -64,7 +64,7 @@ When a mock decryption is requested, a random number between 1 and 10 is generat
 
 ### ZkVerifying
 
-A key component of CoFHE is the ability to pre-encrypt inputs in a secure and verifiable way. `cofhejs` prepares these inputs automatically, and requests a verification signature from the coprocessor `ZkVerifier` module. The zkVerifier returns a signature indicating that the encrypted ciphertext is valid, and has been stored on the Fhenix L2 blockchain.
+A key component of CoFHE is the ability to pre-encrypt inputs in a secure and verifiable way. `cofhejs` prepares these inputs automatically, and requests a verification signature from the coprocessor `ZkVerifier` module. The zkVerifier returns a signature indicating that the encrypted ciphertext is valid, and has been stored on the LuxFHE L2 blockchain.
 
 The mocks are then responsible for mocking two actions:
 
@@ -96,7 +96,7 @@ see `contracts/TestBed.sol` for the original contract
 
 ```solidity
 import {Test} from "forge-std/Test.sol";
-import {CoFheTest} from "@fhenixprotocol/cofhe-contracts/FHE.sol";
+import {CoFheTest} from "@luxfheprotocol/cofhe-contracts/FHE.sol";
 ...
 contract TestBed is Test, CoFheTest {
 

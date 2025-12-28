@@ -7,7 +7,7 @@ import {ACL, Permission} from "./ACL.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import {MockCoFHE} from "./MockCoFHE.sol";
-import {ITaskManager, FunctionId, Utils, EncryptedInput} from "@fhenixprotocol/cofhe-contracts/ICofhe.sol";
+import {ITaskManager, FunctionId, Utils, EncryptedInput} from "@luxfhe/cofhe-contracts/ICofhe.sol";
 
 error DecryptionResultNotReady(uint256 ctHash);
 // Input validation errors

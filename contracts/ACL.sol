@@ -5,7 +5,7 @@ pragma solidity >=0.8.25 <0.9.0;
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 import {Ownable2Step, Ownable} from "@openzeppelin/contracts/access/Ownable2Step.sol";
 import {MockPermissioned, Permission} from "./Permissioned.sol";
-import {TASK_MANAGER_ADDRESS} from "@fhenixprotocol/cofhe-contracts/FHE.sol";
+import {TASK_MANAGER_ADDRESS} from "@luxfhe/cofhe-contracts/FHE.sol";
 
 /**
  * @title  ACL

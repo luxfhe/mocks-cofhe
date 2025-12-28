@@ -1,10 +1,10 @@
 {
-	"name": "@fhenixprotocol/cofhe-mock-contracts",
+	"name": "@luxfhe/cofhe-mock-contracts",
 	"description": "Utility contracts for locally testing CoFHE with mocked FHE primitives locally.",
 	"version": "0.2.1-alpha.0",
 	"author": {
-		"name": "FhenixProtocol",
-		"url": "https://github.com/FhenixProtocol/cofhe-mock-contracts"
+		"name": "luxfheProtocol",
+		"url": "https://github.com/luxfheProtocol/cofhe-mock-contracts"
 	},
 	"scripts": {
 		"test": "forge test -vvv",
@@ -23,16 +23,16 @@
 		"encryption",
 		"privacy",
 		"coprocessor",
-		"fhenix",
+		"luxfhe",
 		"cofhe"
 	],
 	"dependencies": {
-		"@fhenixprotocol/cofhe-contracts": "0.0.13",
+		"@luxfhe/cofhe-contracts": "0.0.13",
 		"@openzeppelin/contracts": "^5.0.0",
 		"@openzeppelin/contracts-upgradeable": "^5.0.0"
 	},
 	"peerDependencies": {
-		"@fhenixprotocol/cofhe-contracts": "0.0.13",
+		"@luxfhe/cofhe-contracts": "0.0.13",
 		"@openzeppelin/contracts": "^5.0.0",
 		"@openzeppelin/contracts-upgradeable": "^5.0.0"
 	},
